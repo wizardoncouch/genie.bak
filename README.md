@@ -34,6 +34,7 @@ $ bower install
 ```
 $ gulp
 ```
+> It will open a browser to display the webpage.
 
 ## Adding package
 
