@@ -6,17 +6,17 @@
 
 ###Dependencies npm, gulp, bower and git.
 
->[NPM Installation].
+[NPM Installation].
 
->Gulp Installation
+Gulp Installation
 
 `$ npm install -g gulp`
 
->Gulp Installation
+Gulp Installation
 
 `$ npm install -g bower`
 
->[GIT Installation]
+[GIT Installation]
 
 
 ###Setting up the boilerplate.
