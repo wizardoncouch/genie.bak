@@ -34,7 +34,7 @@ $ bower install
 ```
 $ gulp
 ```
-> It will open a browser to display the webpage.
+> It will open a browser to display the webpage and will automatically reload everytime you make changes in your `scss`,`js`, and `html`.
 
 ## Adding package
 
