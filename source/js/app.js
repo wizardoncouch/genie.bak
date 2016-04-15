@@ -11,7 +11,7 @@ $(function () {
                 screen_change = true;
             }
             if (screen_change) {
-                $("#sidebar-wrapper").removeClass('active');
+                $("#wrapper").removeClass('active');
             }
             is_small = true;
         } else {
@@ -20,7 +20,7 @@ $(function () {
                 screen_change = true;
             }
             if (screen_change) {
-                $("#sidebar-wrapper").addClass('active');
+                $("#wrapper").addClass('active');
             }
             is_small = false;
         }
@@ -34,7 +34,7 @@ $(function () {
 
     $("#menu-toggle").click(function (e) {
         is_toggle = true;
-        $("#sidebar-wrapper").toggleClass('active');
+        $("#wrapper").toggleClass('active');
     });
 
 });

@@ -22,29 +22,67 @@ html, body {
 
 #header {
   background: #222222;
+  position:fixed;
+  width:100%;
+  min-height: 60px;
+  z-index: 9999;
+
+  & > #logo{
+    padding-left: 75px;
+    font-size:40px;
+    transition: all .4s ease 0s;
+    & span:first-of-type{
+      color:#248ACF;
+      font-weight: bold;
+    }
+    & span:last-of-type{
+      color:#ffffff;
+      font-weight: normal;
+    }
+  }
 }
 
 #wrapper {
-  transition: all .4s ease 0s;
+  margin-top:60px;
   height: 100%;
+  background: #222222;
+  transition: all .4s ease 0s;
 
   #sidebar-wrapper {
-    background: #222222;
     width: 250px;
     left: -175px;
-    position: fixed;
-    height: 100%;
-    z-index: 10000;
+    position: absolute;
     transition: all .4s ease 0s;
   }
 
-  #sidebar-wrapper.active{
+  &.active #sidebar-wrapper{
     margin-left: 175px;
   }
 
-  #sidebar-wrapper.active .sub-icon{
-    float:none !important;
-    padding-right:10px !important;
+  & #page-content-wrapper {
+    background:rgba(200,200,200, 0.5);
+    margin-top:60px;
+    height: auto;
+    margin-left:75px;
+    transition: all .4s ease 0s;
+  }
+
+  &.active #page-content-wrapper{
+    margin-left:250px;
+  }
+
+  &.active .icon-bar{
+    &:first-of-type{
+      transform: rotate(45deg);
+      top:7px;
+    }
+    &:nth-of-type(2){
+      opacity:0;
+    }
+    &:last-of-type{
+      transform: rotate(-45deg);
+      top:-7px;
+    }
   }
 
   ul.sidebar-nav {
@@ -52,6 +90,7 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
+    transition: all .4s ease 0s;
 
     & > #sidebar-brand {
       height: 65px;
@@ -68,11 +107,21 @@ html, body {
         }
 
         & > span {
-          padding: 15px 30px 15px 15px;
+          padding: 15px 25px 15px 15px;
         }
 
         & > #main-icon {
           float: right;
+
+          .icon-bar{
+            transition: all .4s ease 0s;
+            margin-top:5px;
+            display:block;
+            width:24px;
+            height:2px;
+            background:#fff;
+            position:relative;
+          }
         }
       }
     }
@@ -86,11 +135,6 @@ html, body {
         display: block;
         padding: 0;
         text-decoration: none;
-        -webkit-transition: background .5s;
-        -moz-transition: background .5s;
-        -o-transition: background .5s;
-        -ms-transition: background .5s;
-        transition: background .5s;
         &:hover {
           color: #ffffff;
           background: rgba(255, 255, 255, 0.2);
@@ -99,10 +143,12 @@ html, body {
         & > span {
           margin: 0;
           padding: 10px 10px 10px 15px;
+          transition: all .4s ease 0s;
 
           &.sub-icon{
             float:right;
             padding-right:30px;
+            transition: all .4s ease 0s;
           }
         }
 
@@ -113,11 +159,5 @@ html, body {
 
 }
 
-#page-content-wrapper {
-  padding-left: 0;
-  margin-left: 0;
-  width: 100%;
-  height: auto;
-}
 
 
