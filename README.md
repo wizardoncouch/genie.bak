@@ -39,7 +39,7 @@ $ gulp
 ## Adding package
 
 ```
-$ bower install package-name
+$ bower install package-name --save
 ```
 > See gulp documentation if you want to alter the "gulpfile.js" for your package to be included in the project.
 
