@@ -22,7 +22,7 @@ Gulp Installation
 ###Setting up the boilerplate.
 
 ```
-$ git clone
+$ git clone https://github.com/wizardoncouch/designers-boilerplate.git
 $ npm install --only=dev
 $ bower install
 
