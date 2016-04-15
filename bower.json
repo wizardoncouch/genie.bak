@@ -1,0 +1,25 @@
+{
+  "name": "design",
+  "authors": [
+    "Alex Culango <wizardoncouch@gmail.com>"
+  ],
+  "description": "Web Designers Boilerplate",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.1",
+    "jquery-ui": "^1.11.4"
+  }
+}
