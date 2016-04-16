@@ -237,15 +237,21 @@ footer {
     display: inline-block;
     & > a {
       font-size: 14px;
-      padding: 15px 12px;
       line-height: 20px;
       color: #ecf0f1;
 
       i {
-        padding: 0 16px;
+        padding: 8px 13px;
       }
       span {
-        padding: 0 5px;
+        padding: 8px 5px;
+      }
+
+      img#profile-image {
+        margin: 0 10px;
+        height: 30px;
+        width: 30px;
+        @include border-radius(50%);
       }
     }
   }
