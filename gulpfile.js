@@ -3,6 +3,8 @@ var source = './source',
     html = source + '/html',
     js = source + '/js',
     scss = source + '/sass',
+    fonts = source + '/fonts',
+    images = source + '/images',
     gulp = require('gulp'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
@@ -16,7 +18,7 @@ var source = './source',
         'fontawesome': './bower_components/font-awesome/'
     };
 
-gulp.task('serve', ['font-vendors', 'js', 'scss', 'html'], function () {
+gulp.task('serve', ['font-vendors', 'fonts', 'images', 'js', 'scss', 'html'], function () {
 
     browserSync.init({
         server: {
@@ -28,11 +30,13 @@ gulp.task('serve', ['font-vendors', 'js', 'scss', 'html'], function () {
     gulp.watch(scss + '/*.scss', ['scss']);
     gulp.watch(js + '/*.js', ['js']);
     gulp.watch(html + '/*.html', ['html']);
+    gulp.watch(images + '/*.*', ['images']);
+    gulp.watch(fonts + '/*.*', ['fonts']);
 
 });
 
 gulp.task('scss', function () {
-    gulp.src(scss + '/*.scss')
+    gulp.src(scss + '/app.scss')
         .pipe(sass({
             includePaths: [
                 paths.bootstrap + 'stylesheets',
@@ -49,6 +53,16 @@ gulp.task('html', function () {
     gulp.src(html + '/**')
         .pipe(gulp.dest('./public/'))
         .pipe(browserSync.stream());
+});
+
+gulp.task('fonts', function () {
+    gulp.src(fonts + '/**')
+        .pipe(gulp.dest('./public/fonts/'));
+});
+
+gulp.task('images', function () {
+    gulp.src(images + '/**')
+        .pipe(gulp.dest('./public/images/'));
 });
 
 gulp.task('font-vendors', function () {
