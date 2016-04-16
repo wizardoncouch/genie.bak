@@ -1,5 +1,5 @@
 // grab our gulp packages
-var source = './source',
+var source = './resources',
     html = source + '/html',
     js = source + '/js',
     scss = source + '/sass',
